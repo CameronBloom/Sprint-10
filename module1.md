@@ -50,12 +50,17 @@
 > dispatched actions are processed by a reducer that accepts the previous state and the action
 > dispatched actions return the next state of your application
 
-### Objective 2 - Share Data Between Components Using State and Props
+### Objective 2 - Describe Reducer Functions
 > reducer functions take two arguments, the current state and action
 > reducer functions return a new, updated state object based on both arguments
 > `(state, action) => newState`
+> we'll use JavaScript's `switch` statement to make that part of our reducer a lot more readable
 
 
-
-## Objective 3 - Respond to Events Triggered by User Interaction and Handle User Input via Forms in React
-> 
+## Objective 3 - Employ the useReducer Hook to Manage State in a Component
+> the `useReducer` hook is an alternative to `useState` (`useState` actually uses `useReducer` hook under the hood)
+> the `useReducer` hook is preferred when you have more complex logic or more than 3 state properties
+> `const [state, dispatch] = useReducer(reducer, initialState);`
+> the dispatch method is a significant addition to our arsenal here
+> it will "dispatch" an action to our reducer when specific events occur in our application
+> the `useReducer` hook has all the functionality of the `useState` hook with the power of the reducers we build
