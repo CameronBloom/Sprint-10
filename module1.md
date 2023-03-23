@@ -51,7 +51,11 @@
 > dispatched actions return the next state of your application
 
 ### Objective 2 - Share Data Between Components Using State and Props
-> 
+> reducer functions take two arguments, the current state and action
+> reducer functions return a new, updated state object based on both arguments
+> `(state, action) => newState`
+
+
 
 ## Objective 3 - Respond to Events Triggered by User Interaction and Handle User Input via Forms in React
 > 
