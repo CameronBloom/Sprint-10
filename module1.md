@@ -1,5 +1,6 @@
 # Module 1 - The Reducer Pattern
-> 
+> reducer function take in two arguments and return a new, immutable item
+> react components will only re-render if your state updates are immutable
 
 ## Key Concepts
 > explain the reducer pattern
