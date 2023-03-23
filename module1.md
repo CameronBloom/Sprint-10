@@ -23,9 +23,32 @@
 > `export const setTitle = (title) => {             <= dispatch function`
 > `  return { type: SET_TITLE, payload: title );    <= dispatch function`
 > `}                                                <= dispatch function`
+> reducers...
+> `export const initialState = {                                                         `
+> `  title: "Hello World",                                                               `
+> `  editing: false,                                                                     `
+> `  newTitleText: "",                                                                   `
+> `}                                                                                     `
+> `......................................................................................`
+> `export const reducer = (prevState, action) => {                                       `
+> `  switch(action.type) {                                                               `
+> `    case(SET_TITLE):                                                                  `
+> `      return (...prevState, title: action.payload", newTitleText: "", editing: false) `
+> `    case(SET_EDITING):                                                                `
+> `      return (...prevState, editing: !prevState.editing)                              `
+> `    default:                                                                          `
+> `      return (prevState)                                                              `
+> `  }                                                                                   `
+> `}                                                                                     `
 
-### Objective 1 - Explain Class Components, and Use a Class Component to Render Some State Data to the DOM
->
+### Objective 1 - Explain What Immutability is in Programming and Demonstrate its Benefits
+> redux is built on the programming principle of immutability
+> a predictable state management machine limits the impact of unwanted side effects
+> immutability tracking makes it easy to track mutations over time
+> redux has a single immutable state tree, referred to as the store
+> all state changes are explicitly handled by dispatching actions
+> dispatched actions are processed by a reducer that accepts the previous state and the action
+> dispatched actions return the next state of your application
 
 ### Objective 2 - Share Data Between Components Using State and Props
 > 
