@@ -43,9 +43,30 @@
 > - - there are action types, action creators, and actions
 > - the reducer receives the emitted action and will create a new state tree to pass to the store
 > - the new state tree is passed to the view, completing the cycle
+> there are three big principles with redux
+> - redux creates a single source of truth for all of your data
+> - state is read-only, so you cannot change the state tree without an action
+> - changes are made with pure functions (reducers)
 
 ### Objective 2 - Create a Redux Store and Connect it to a React Applications
-> 
+> create the store
+> a reducer is a function that returns an object representing the state tree
+> wrap our <App> component in a <Provider> component
+> install redux with `npm install react-redux redux`
+> ==========================================================
+> ` import { createStore } from 'redux';                   `
+> ` import { Provider } from 'react-redux';                `
+> `                                                        `
+> ` function reducer() {                                   `
+> `   return {                                             `
+> `     title: 'Hello world! I\'m in the Redux store!',    `
+> `   }                                                    `
+> ` }                                                      `
+> `                                                        `
+> ` const store = createStore(reducer);                    `
+> ` <Provider store={store}> <App/> </Provider>            `
+
+
 
 ## Objective 3 - Use the Connect Function to Connect React Components to the Redux Store
 > 
