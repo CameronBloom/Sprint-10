@@ -66,10 +66,15 @@
 > ` const store = createStore(reducer);                    `
 > ` <Provider store={store}> <App/> </Provider>            `
 
-
-
 ## Objective 3 - Use the Connect Function to Connect React Components to the Redux Store
-> 
+> we use the `connect()` function to connect a component to the redux store
+> instead of exporting the component, we export the `connect()` function call
+> the `connect()` function is invoked twice
+> - first call, pass in a function and an object
+> - second call, pass in the component we're connecting
+> `mapStateToProps` is a function that tells `connect()` which pieces of state to pass to the component
+> `mapStateToProps` takes in state as an argument
+> `mapStateToProps` returns an object of properties getting passed to the component as `props`
 
 ## Objective 4 - Write Actions and Action CReators to Describe State Changes
 > 
