@@ -6,6 +6,8 @@ import { toggleRaceCompleted } from './actions';
 const mapStateToProps = state => {
   return {
     title: state.title,
+    teams: state.teams,
+    drivers: state.drivers,
     races: state.races,
   }
 }
@@ -17,9 +19,9 @@ function App(props) {
         <p>{props.title}</p>
         { props.races.map((race, idx) => {
           return (
-            <div key={idx} >
+            <div key={idx} onClick={ () => toggleRaceCompleted(race, idx) }>
               <h4>{ race.location } - { race.completed ? "completed!" : "coming soon..." }</h4>
-              <button onClick={ toggleRaceCompleted }>Toggler</button>
+              {/* <button onClick={ toggleRaceCompleted }>Toggler</button> */}
             </div>
           )
         })}

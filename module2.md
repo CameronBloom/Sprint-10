@@ -89,4 +89,8 @@
 
 
 ## Objective 5 - Write Reducers to Respond to Actions and Update State
-> 
+> reducers are pure functions
+> reducers take in the current state tree and an action as arguments
+> reducers use a switch case to check the action type of the dispatched action
+> reducers create an updated state tree based on the action type and payload
+> the updated state tree triggers the UI to re-render with the new data
