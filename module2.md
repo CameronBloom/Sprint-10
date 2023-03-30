@@ -77,7 +77,16 @@
 > `mapStateToProps` returns an object of properties getting passed to the component as `props`
 
 ## Objective 4 - Write Actions and Action CReators to Describe State Changes
-> 
+> actions in Redux are packets of information that contain an action type and associated data
+> actions have a required `type` property and an optional `payload` property
+> the `type` property explains what interaction just happened
+> the `type` property should be desrcibed in all caps and underscores
+> the `payload` property is the data that goes along with that interaction
+> actions are dispatched to the reducer as an argument
+> the reducer updates the state according to the `type` and `payload` dispatched by the action
+> the reducer is the only method we can use to update our state
+> we will want to create an actions directory to store all actions
+
 
 ## Objective 5 - Write Reducers to Respond to Actions and Update State
 > 

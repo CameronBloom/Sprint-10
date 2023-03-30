@@ -1,10 +1,12 @@
 import './App.css';
 import { connect } from 'react-redux';
+import { toggleRaceCompleted } from './actions';
 
+// take in state and return an object of props
 const mapStateToProps = state => {
   return {
     title: state.title,
-    races: state.races
+    races: state.races,
   }
 }
 
@@ -13,11 +15,12 @@ function App(props) {
     <div className="App">
       <header className="App-header">
         <p>{props.title}</p>
-        { props.races.map(race => {
+        { props.races.map((race, idx) => {
           return (
-            <>
+            <div key={idx} >
               <h4>{ race.location } - { race.completed ? "completed!" : "coming soon..." }</h4>
-            </>
+              <button onClick={ toggleRaceCompleted }>Toggler</button>
+            </div>
           )
         })}
         <a
@@ -33,4 +36,5 @@ function App(props) {
   );
 }
 
-export default connect(mapStateToProps, {})(App)
+// connect our props to the app component
+export default connect(mapStateToProps, { toggleRaceCompleted })(App)
