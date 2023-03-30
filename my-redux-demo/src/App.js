@@ -13,15 +13,17 @@ const mapStateToProps = state => {
 }
 
 function App(props) {
+  // don't forget to destructure...
+  const { title, races, toggleRaceCompleted } = props;
+  
   return (
     <div className="App">
       <header className="App-header">
-        <p>{props.title}</p>
-        { props.races.map((race, idx) => {
+        <p>{title}</p>
+        { races.map((race, idx) => {
           return (
             <div key={idx} onClick={ () => toggleRaceCompleted(race, idx) }>
               <h4>{ race.location } - { race.completed ? "completed!" : "coming soon..." }</h4>
-              {/* <button onClick={ toggleRaceCompleted }>Toggler</button> */}
             </div>
           )
         })}

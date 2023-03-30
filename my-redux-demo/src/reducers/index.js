@@ -40,7 +40,13 @@ export const reducer = (state = initialState, action) => {
       console.log(`reducer case reached!`);
       return {
         ...state,
-        races: [...state.races, action.payload]
+        races: state.races.map((race) => {
+          if (race.location === action.payload) {
+            return { ...race, completed: !race.completed }
+          } else {
+            return race;
+          }
+        })
       }
     // by default we return the state untouched
     default:
