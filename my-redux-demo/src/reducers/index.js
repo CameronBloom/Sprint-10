@@ -31,10 +31,10 @@ const initialState = {
 
 // create the reducer function
 export const reducer = (state = initialState, action) => {
-  console.log(action);
-  console.log(`reducer reached!`)
+
   // check for the action type with a switch statement
   switch (action.type) {
+    
     // make a case for each action type
     case TOGGLE_RACE_COMPLETED:
       console.log(`reducer case reached!`);
