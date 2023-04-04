@@ -49,7 +49,33 @@
 > make sure the logger middleware is passed as the last argument in the `applyMiddleware` function
 
 
-### Objective 3 - Use the Connect Function to Connect React Components to the Redux Store
+### Objective 3 - Effectively Use Redux-Thunk and Asynchronous Action Creators to Consume Data From External API's
+> redux thunk helps us make asynchronous operations in redux
+> redux runs synchronously by default
+> thunk is a term used to describe a function that is returned by another function (an inner function)
+> =================== add thunk middleware ===================
+> `npm install redux-thunk`
+>
+> `import { applyMiddleware, createStore } from 'redux';`
+> `import thunk from 'redux-thunk';`
+>
+> `const store = createStore(reducer, applyMiddleware(thunk))`
+>
+> in the async action creator, return a function that has dispatch as a parameter
+> the thunk (inner function) is implicitly returned
+> the thunk we are returning takes in dispatch as a parameter
+> the thunk contains an axios request and dispatches the success or failure action
+>
+> ================== create an async action ==================
+> `const asyncOperation = data => dispatch => {`
+> `  axios.post("/api/data-call", data)`
+> `    .then(res) => {`
+> `      dispatch({} type: CALL_SUCCESS, payload: res.data);`
+> `    }`
+> `    .catch(err) => {`
+> `      dispatch({} type: CALL_FAILURE, payload: err.response);`
+> `    }`
+> `};`
 
 ### Objective 4 - Write Actions and Action CReators to Describe State Changes
 
