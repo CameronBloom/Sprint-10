@@ -23,7 +23,14 @@
 > reduxThunk is an example of common redux middleware
 > asynchronous actions need to happen before the actions reach the reducers
 
-### Objective 1 - Explain What Redux is and the Problem it Solves
+### Objective 1 - Describe the Finite State Machine Pattern and Its Relationship to Building Redux Applications
+> a finite state machine is a mathematical theory of computation
+> a machine can have a finite number of states, but can only operate on one state at a given time
+> the next state is calculated based on an input and the current state
+> initial state is tracked in the store
+> current state is tracked in the store
+> inputs or actions trigger transitions (reducers) to the next state
+> redux is NOT a finite state machine
 
 ### Objective 2 - Create a Redux Store and Connect it to a React Applications
 
