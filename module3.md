@@ -76,7 +76,3 @@
 > `      dispatch({} type: CALL_FAILURE, payload: err.response);`
 > `    }`
 > `};`
-
-### Objective 4 - Write Actions and Action CReators to Describe State Changes
-
-### Objective 5 - Write Reducers to Respond to Actions and Update State
