@@ -32,7 +32,22 @@
 > inputs or actions trigger transitions (reducers) to the next state
 > redux is NOT a finite state machine
 
-### Objective 2 - Create a Redux Store and Connect it to a React Applications
+### Objective 2 - Implement Redux Middleware Libraries Into a Redux Store Using ApplyMiddleware
+> middleware is a common tool in programming to intercept some process, run a function, then continue the process
+> middleware will generally try to use data being passed through functions
+> middleware can stop actions
+> middleware can forward an action untouched
+> middleware can dispatch a different action
+> middleware can dispatch multiple actions
+> =================== add logger middleware ===================
+> `npm install redux-logger`
+>
+> `import { applyMiddleware, createStore } from 'redux';`
+> `import logger from 'redux-logger';`
+>
+> `const store = createStore(reducer, applyMiddleware(logger))`
+> make sure the logger middleware is passed as the last argument in the `applyMiddleware` function
+
 
 ### Objective 3 - Use the Connect Function to Connect React Components to the Redux Store
 
