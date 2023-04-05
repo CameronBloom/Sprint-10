@@ -52,4 +52,5 @@
 > child components will be able to consume the `value` data 
 
 ### Objective 3 - Consume Data from a Context Object in Nested Components
-> ...
+> a context hooks is used to consume the data passed into the <Provider>
+
