@@ -31,7 +31,25 @@
 > the context API can make components harder to reuse
 
 ### Objective 2 - Provide Data to the Component Tree With a Context Provider
-> ...
+> the context API allows us to create a context object
+> the context object gives us a <Provider> and <Consumer> component
+> the <Provider> component accepts a single prop called `value`
+> the `value` prop is used to provide data across the application
+> the <Consumer> component consumes and returns the `value` prop
+>
+> ================= create a context object =================
+> `import { createContext } from 'react';`
+> `const ContextObject = createContext();`
+> `<ContextObject.Provider value={dataToPassDown}>`
+> `  <NestedComponent />`
+> `  <OtherNestedComponent />`
+> `</ContextObject.Provider>`
+> 
+> always create a "contexts" folder to hold all context objects
+> create each context in an appropriately named JS file
+> import the created context and wrap all child components in a <Provider>
+> pass the `value` prop that contains our state to the <Provider>
+> child components will be able to consume the `value` data 
 
 ### Objective 3 - Consume Data from a Context Object in Nested Components
 > ...
